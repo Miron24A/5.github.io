@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Text</title>
+</head>
+<body>
+<script type="text/javascript">
+function Start() {
+    var x = 10,
+        y = 10,
+        R = 150,
+        A = 0,
+        PI = Math.PI * 2;
+        dA = PI / 64;
+        text = document.getElementById('id2');
+    setInterval(function() {
+        text.style.top = Math.round(y + R * (1 + Math.sin(A))) * Math.sin(A) + 'px';
+        text.style.left = Math.round(x + R * (1 + Math.sin(A))) * Math.cos(A) + 'px';
+        A += dA;
+        if (A >= PI) A += PI;
+        else if (A < 0) A -= PI;
+    },30);
+}; 	
+</script>
+</head>
+<body onload="Start()">
+<div id="id2" style="position: absolute;margin-top: 20%;margin-left: 20%; width:100px; height:100px;background: yellow">Эксперимент</div>
+</body>
+</body>
+</html>

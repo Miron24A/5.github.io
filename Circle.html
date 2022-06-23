@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+        from {
+                transform: rotate(0deg)
+                           translate(-150px)
+                           rotate(0deg);
+        }
+        to {
+                transform: rotate(360deg)
+                           translate(-150px)
+                           rotate(-360deg);
+        }
+}
+.id1 {
+        top: 400px;
+        left: 70%;
+        margin: -20px;
+        animation: move 1s infinite linear;
+}
+    </style>
+</head>
+<body>
+    <div class="id1" style="position:absolute;left:500px;width:100px;height:100px;background:yellow">Эксперимент</div>
+</body>
+</html>

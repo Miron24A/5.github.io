@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Амогус</title>
+</head>
+<body>
+<div id="id1" style="position:absolute;left:100px;width:100px;height:100px;background:yellow">Эксперимент</div>
+<script>
+var start = 0;
+var final = 1800;
+var dir = 5;
+var pos = start;
+function move()
+{
+pos += dir;
+if (pos == start || pos == final) dir *= -1;
+document.getElementById ('id1').style.left = pos + 'px';
+setTimeout (move, 2);
+}
+onload = move();
+</script>
+<script type="text/javascript">
+function Start() {
+    var x0 = 950,
+        y0 = 300,
+        R = 100,
+        A = 0,
+        PI = Math.PI * 3;
+        dA = PI / 64;
+        text = document.getElementById('id11');
+    setInterval(function() {
+        text.style.left = Math.round(x0 + R * Math.cos(A)) + 'px';
+        text.style.top = Math.round(y0 + R * Math.sin(A)) + 'px';
+        A += dA;
+        if (A >= PI) A -= PI;
+        else if (A < 0) A += PI;
+    }, 40);
+}; 	
+</script>
+<div id="id11" style="position:absolute;left:100px;width:100px;height:100px;background:yellow">Эксперимент</div>
+<body onload="Start()">
+</body>
+</body>
+</html>
